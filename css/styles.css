@@ -1,0 +1,59 @@
+:root{
+  --bg:#05060a;
+  --panel:#0f1720;
+  --accent:#ff6a00;
+  --muted:#9aa3b2;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  background: radial-gradient(1200px 600px at 10% 10%, rgba(255,106,0,0.03), transparent),
+              linear-gradient(180deg, #030407 0%, #07080b 100%);
+  color:#e6eef8;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* NAV */
+.navbar{
+  background:transparent;
+  padding:1rem 0;
+  transition: background .25s ease, box-shadow .25s ease, padding .25s ease;
+}
+.navbar .nav-link{color:rgba(255,255,255,0.8)}
+.navbar.scrolled{background: rgba(6,6,9,0.95); box-shadow: 0 8px 30px rgba(0,0,0,0.6); padding:0.45rem 0}
+
+/* logo */
+.logo-circle{
+  width:36px;height:36px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#ffb703);display:flex;align-items:center;justify-content:center;color:#071019;font-weight:700;font-size:14px;
+}
+
+/* HERO */
+.hero{position:relative;min-height:62vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:4rem 1rem}
+.hero .glow{color:transparent;background:linear-gradient(90deg,#fff,#ffd6a6);-webkit-background-clip:text;background-clip:text;text-shadow:0 6px 20px rgba(255,106,0,0.06)}
+.hero-decor{position:absolute;inset:0;background-image:url('../img/awp_asiimov.jpg');background-size:cover;background-position:center;opacity:0.05;filter:blur(2px)}
+
+/* cards */
+.card-skin{background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:12px;border:1px solid rgba(255,255,255,0.03);transition:transform .28s ease,box-shadow .28s ease;padding:14px}
+.card-skin:hover{transform:translateY(-10px) scale(1.02);box-shadow:0 18px 40px rgba(0,0,0,0.6)}
+.skin-img{height:170px;object-fit:contain;border-radius:8px;background:linear-gradient(180deg, rgba(0,0,0,0.25), rgba(255,255,255,0.02));transition:transform .4s ease,filter .4s ease}
+.card-skin:hover .skin-img{transform:scale(1.08);filter:brightness(1.05) saturate(1.1)}
+
+/* price */
+.price-badge{color:var(--accent);font-weight:700;letter-spacing:0.5px}
+
+/* buttons */
+.btn-outline-light{border-color:rgba(255,255,255,0.12);color:#fff}
+
+/* back to top */
+#backTop{position:fixed;right:22px;bottom:22px;width:44px;height:44px;border-radius:8px;border:none;background:var(--accent);color:#071019;font-weight:700;display:none;box-shadow:0 10px 30px rgba(0,0,0,0.6);cursor:pointer}
+
+/* modal */
+.modal-content{background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(0,0,0,0.45));border:none;border-radius:12px}
+
+/* responsive */
+@media (max-width:768px){
+  .skin-img{height:140px}
+  .hero{padding:2.2rem 1rem}
+}
